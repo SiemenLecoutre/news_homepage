@@ -3,6 +3,7 @@ import Link from "next/link"
 import { useState, useEffect } from "react"
 import logo from '../assets/images/logo.svg'
 import hamburger from '../assets/images/icon-menu.svg'
+import close from '../assets/images/icon-menu-close.svg'
 
 function Navbar() {
     const [mobileNavOpen, setMobileNavOpen] = useState(false)
@@ -31,7 +32,7 @@ function Navbar() {
             {mobileNavOpen && (
                 <div className="mobile-menu">
                     <ul className="mobile-grid">
-                        <li><button onClick={() => setMobileNavOpen(prevValue => !prevValue)} className="hamburger"><Image src={hamburger} /></button></li>
+                        <li><button onClick={() => setMobileNavOpen(prevValue => !prevValue)} className="hamburger"><Image src={close} /></button></li>
                         <li><Link href="/">Home</Link></li>
                         <li><Link href="#">New</Link></li>
                         <li><Link href="#">Popular</Link></li>
