@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 import { useState, useEffect } from "react"
 import logo from '../assets/images/logo.svg'
 import hamburger from '../assets/images/icon-menu.svg'
@@ -14,16 +15,16 @@ function Navbar() {
     return (
         <nav>
             <ul className="desktop-nav">
-                <li><a href="/"><Image src={logo} alt='news website logo' /></a></li>
-                <li><a href="/">Home</a></li>
-                <li><a href="#">New</a></li>
-                <li><a href="#">Popular</a></li>
-                <li><a href="#">Trending</a></li>
-                <li><a href="#">Categories</a></li>
+                <li><Link href="/"><Image src={logo} alt='news website logo' /></Link></li>
+                <li><Link href="/">Home</Link></li>
+                <li><Link href="#">New</Link></li>
+                <li><Link href="#">Popular</Link></li>
+                <li><Link href="#">Trending</Link></li>
+                <li><Link href="#">Categories</Link></li>
             </ul>
 
             <ul className="mobile-nav">
-                <li><a href="/"><Image src={logo} alt='news website logo' /></a></li>
+                <li><Link href="/"><Image src={logo} alt='news website logo' /></Link></li>
                 <li><button onClick={() => setMobileNavOpen(prevValue => !prevValue)} className="hamburger"><Image src={hamburger} /></button></li>
             </ul>
 
@@ -31,11 +32,11 @@ function Navbar() {
                 <div className="mobile-menu">
                     <ul className="mobile-grid">
                         <li><button onClick={() => setMobileNavOpen(prevValue => !prevValue)} className="hamburger"><Image src={hamburger} /></button></li>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="#">New</a></li>
-                        <li><a href="#">Popular</a></li>
-                        <li><a href="#">Trending</a></li>
-                        <li><a href="#">Categories</a></li>
+                        <li><Link href="/">Home</Link></li>
+                        <li><Link href="#">New</Link></li>
+                        <li><Link href="#">Popular</Link></li>
+                        <li><Link href="#">Trending</Link></li>
+                        <li><Link href="#">Categories</Link></li>
                     </ul>
                 </div>
             )}
